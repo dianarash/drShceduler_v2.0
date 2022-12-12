@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:fontFamily="@font/namu"
             android:layout_marginRight="10dp"
             android:background="@drawable/et_style"
             android:text="Mon 01.01.2023"

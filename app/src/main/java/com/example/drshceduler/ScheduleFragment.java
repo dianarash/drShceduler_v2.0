@@ -1,5 +1,6 @@
 package com.example.drshceduler;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -143,6 +144,7 @@ public class ScheduleFragment extends Fragment {
             txtvSubType.setText(subject.getType());
             txtvSubCabinet.setText(subject.getCabinet());
             txtvSubLink.setText(subject.getLink());
+            txtvSubLink.setPaintFlags(txtvSubLink.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
             txtvSubNumber.setText(subject.getNumber());
 
             txtvSubLink.setOnClickListener(new View.OnClickListener() {

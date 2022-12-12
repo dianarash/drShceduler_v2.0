@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:fontFamily="@font/namu"
         android:layout_marginTop="10dp"
         android:text="09:00 - 10:20"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +59,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/et_style"
             android:orientation="vertical"
-            android:paddingLeft="6dp">
+            android:paddingLeft="6dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="4dp">
 
             <LinearLayout
                 android:id="@+id/ltSubName"
@@ -71,6 +74,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/namu"
                     android:text="Англійська мова"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -80,13 +84,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/namu"
                     android:text="   " />
 
                 <TextView
                     android:id="@+id/txtvSubType"
-                    android:layout_width="wrap_content"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/namu"
+                    android:gravity="center_horizontal"
                     android:text="(Practice)" />
 
             </LinearLayout>
@@ -102,6 +109,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/namu"
                     android:text="Кривцун Неоніла Зеновіївна" />
 
                 <TextView
@@ -109,6 +117,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/namu"
                     android:gravity="right"
                     android:paddingRight="10dp"
                     android:text="1.203"
@@ -119,6 +128,7 @@
                 android:id="@+id/txtvSubLink"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/namu"
                 android:text="https://us04web.zoom.us/j/76889583600?pwd=wSaRgNkS957mGAVmkx84p3QJAbPL26.1" />
         </LinearLayout>
     </LinearLayout>

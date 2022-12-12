@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="TextView"
+            android:fontFamily="@font/namu"
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +53,7 @@
                     android:id="@+id/txtvStIDtit"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/namu"
                     android:text="@string/tit_studentid"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -60,6 +62,7 @@
                     android:id="@+id/txtvStudentID"
                     android:layout_width="238dp"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/namu"
                     android:text="..."
                     android:textSize="20sp"
                     android:textStyle="bold|italic" />
@@ -73,6 +76,7 @@
                     android:id="@+id/txtvFacultyTit"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/namu"
                     android:text="@string/tit_faculty"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -81,6 +85,7 @@
                     android:id="@+id/txtvFaculty"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/namu"
                     android:text="..."
                     android:textSize="20sp"
                     android:textStyle="bold|italic" />
@@ -94,6 +99,7 @@
                     android:id="@+id/txtvSpecTit"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/namu"
                     android:text="@string/tit_specialty"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -102,6 +108,7 @@
                     android:id="@+id/txtvSpeciality"
                     android:layout_width="201dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/namu"
                     android:text="..."
                     android:textSize="20sp"
                     android:textStyle="bold|italic" />
@@ -115,6 +122,7 @@
                     android:id="@+id/txtvGroupTit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/namu"
                     android:text="@string/tit_group"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -123,6 +131,7 @@
                     android:id="@+id/txtvGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/namu"
                     android:text="..."
                     android:textSize="20sp"
                     android:textStyle="bold|italic" />
@@ -136,6 +145,7 @@
                     android:id="@+id/txtvTermTit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/namu"
                     android:text="@string/tit_term"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -144,6 +154,7 @@
                     android:id="@+id/txtvTerm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/namu"
                     android:text="..."
                     android:textSize="20sp"
                     android:textStyle="bold|italic" />
@@ -157,6 +168,7 @@
                     android:id="@+id/txtvFoStit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/namu"
                     android:text="@string/tit_form_of_study"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -165,6 +177,7 @@
                     android:id="@+id/txtvFoS"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/namu"
                     android:text="..."
                     android:textSize="20sp"
                     android:textStyle="bold|italic" />
@@ -178,6 +191,7 @@
                     android:id="@+id/txtvToStit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/namu"
                     android:text="@string/tit_term_of_study"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -186,6 +200,7 @@
                     android:id="@+id/txtvToS"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/namu"
                     android:text="..."
                     android:textSize="20sp"
                     android:textStyle="bold|italic" />
@@ -204,8 +219,9 @@
 
             <TextView
                 android:id="@+id/txtvEmailTit"
-                android:layout_width="169dp"
-                android:layout_height="wrap_content"
+                android:layout_width="184dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/namu"
                 android:text="@string/tit_email"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -214,6 +230,7 @@
                 android:id="@+id/txtvEmail"
                 android:layout_width="245dp"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/namu"
                 android:text="..."
                 android:textSize="20sp"
                 android:textStyle="bold|italic" />
