@@ -13,57 +13,10 @@ public class User {
     private String UserID;
     private String Language;
     private boolean ThemeDark;
-    private int TimeNotify;
-    private boolean Notify;
 
     public User() {
     }
 
-    public User(String fullName, String studentID, String faculty, String specialty, String group, String term,
-                String formOfEducation, String termOfEducation, String email, String userID) {
-        this.StudentID = studentID;
-        this.FullName = fullName;
-        this.Faculty = faculty;
-        this.Specialty = specialty;
-        this.Group = group;
-        this.Term = term;
-        this.FormOfEducation = formOfEducation;
-        this.TermOfEducation = termOfEducation;
-        this.Email = email;
-        this.UserID = userID;
-    }
-
-    public void setStudentID(String studentID) {
-        StudentID = studentID;
-    }
-
-    public void setFullName(String fullName) {
-        FullName = fullName;
-    }
-
-    public void setFaculty(String faculty) {
-        Faculty = faculty;
-    }
-
-    public void setSpecialty(String specialty) {
-        Specialty = specialty;
-    }
-
-    public void setGroup(String group) {
-        Group = group;
-    }
-
-    public void setTerm(String term) {
-        Term = term;
-    }
-
-    public void setFormOfEducation(String formOfEducation) {
-        FormOfEducation = formOfEducation;
-    }
-
-    public void setTermOfEducation(String termOfEducation) {
-        TermOfEducation = termOfEducation;
-    }
 
     public void setEmail(String email) {
         Email = email;
@@ -117,32 +70,8 @@ public class User {
         return Language;
     }
 
-    public void setLanguage(String language) {
-        Language = language;
-    }
-
     public boolean isThemeDark() {
         return ThemeDark;
-    }
-
-    public void setThemeDark(boolean themeDark) {
-        ThemeDark = themeDark;
-    }
-
-    public int getTimeNotify() {
-        return TimeNotify;
-    }
-
-    public void setTimeNotify(int timeNotify) {
-        TimeNotify = timeNotify;
-    }
-
-    public boolean isNotify() {
-        return Notify;
-    }
-
-    public void setNotify(boolean notify) {
-        Notify = notify;
     }
 
 }

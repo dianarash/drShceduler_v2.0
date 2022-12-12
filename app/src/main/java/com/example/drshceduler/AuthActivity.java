@@ -115,7 +115,7 @@ public class AuthActivity extends AppCompatActivity {
     }
 
     private void addToSchedule() {
-        dbTemp = FirebaseDatabase.getInstance().getReference().child("/Schedule/ІП-19-2(1)");
+        dbTemp = FirebaseDatabase.getInstance().getReference().child("/Schedule/ІП-19-2(2)");
         String sub;
         for (int i = 14; i < 21; i++) {
             sub = "Subject" + i;

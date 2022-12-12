@@ -73,5 +73,19 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+        rdgrLng.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.rbtnLang2:
+                        dbUser.child(student.getUserID()).child("Language").setValue("en");
+                        break;
+                    default:
+                        dbUser.child(student.getUserID()).child("Language").setValue("uk");
+                        break;
+                }
+            }
+        });
+
     }
 }

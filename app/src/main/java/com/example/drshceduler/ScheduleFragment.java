@@ -1,6 +1,8 @@
 package com.example.drshceduler;
 
+import android.content.Intent;
 import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,6 +25,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Calendar;
+
 
 import static com.example.drshceduler.DataActivity.subjectListFull;
 
@@ -151,17 +154,20 @@ public class ScheduleFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Log.d("===== Selected Link:", String.valueOf(txtvSubLink.getText()));
-                    URL myURL = null;
-                    try {
-                        myURL = new URL(String.valueOf(txtvSubLink.getText()));
-                        URLConnection myURLConnection = myURL.openConnection();
-                        myURLConnection.connect();
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    Uri uri = Uri.parse(String.valueOf(txtvSubLink.getText()));
+                    startActivity(new Intent(Intent.ACTION_VIEW, uri));
+//                    URL myURL = null;
+//                    try {
+//                        myURL = new URL(String.valueOf(txtvSubLink.getText()));
+//                        URLConnection myURLConnection = myURL.openConnection();
+//                        myURLConnection.connect();
+//                    } catch (MalformedURLException e) {
+//                        e.printStackTrace();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
                 }
+
             });
 
             // Return the completed view to render on screen
