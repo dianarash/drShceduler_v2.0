@@ -31,8 +31,6 @@ import java.util.List;
 public class AuthActivity extends AppCompatActivity {
     private EditText username, password;
     private FirebaseAuth mAuth;
-    private DatabaseReference dbTemp;
-    private DatabaseReference dbSchedule;
     public static DatabaseReference dbUser;
     public static User student;
     public static List<Subject> subjectList;
@@ -59,15 +57,16 @@ public class AuthActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                // Sign in success, update UI with the signed-in user's information
+                                // Авторизація пройшла успішно, зчитуємо дані користувача в об'єкт класу User
+                                // переходимо до наступного екрану
                                 Log.d(TAG, "signInWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 Log.d(TAG, String.valueOf(user));
                                 readStudentData(user);
-//                                addToSchedule();
                                 startSelectData(user);
                             } else {
-                                // If sign in fails, display a message to the user.
+                                // Якщо авторизація невдала, очищаємо поля вводу логіну та паролю
+                                // виводимо повідомлення користувачу
                                 Log.w(TAG, "signInWithEmail:failure", task.getException());
                                 username.setText("");
                                 password.setText("");
@@ -84,6 +83,7 @@ public class AuthActivity extends AppCompatActivity {
     }
 
     private void startSelectData(FirebaseUser user){
+        //Метод для переходу до наступного екрану
         Intent intent = new Intent(this, DataActivity.class);
         //передаємо в наступну activity ID і E-Mail
         intent.putExtra("student", user.getUid());
@@ -92,6 +92,7 @@ public class AuthActivity extends AppCompatActivity {
     }
 
     private void readStudentData(FirebaseUser user){
+        //Метод для зчитування даних користувача в об'єкт класу User
         String uId = user.getUid();
         dbUser.child(uId).addValueEventListener(new ValueEventListener() {
             @Override
@@ -112,21 +113,5 @@ public class AuthActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    private void addToSchedule() {
-        dbTemp = FirebaseDatabase.getInstance().getReference().child("/Schedule/ІП-19-2(2)");
-        String sub;
-        for (int i = 14; i < 21; i++) {
-            sub = "Subject" + i;
-            dbTemp.child(sub).child("Cabinet").setValue("C");
-            dbTemp.child(sub).child("Subject").setValue("S");
-            dbTemp.child(sub).child("Type").setValue("Lecture");
-            dbTemp.child(sub).child("Teacher").setValue("T");
-            dbTemp.child(sub).child("Day").setValue("Tue");
-            dbTemp.child(sub).child("Week").setValue("All");
-            dbTemp.child(sub).child("Link").setValue("L");
-            dbTemp.child(sub).child("Time").setValue(": - :");
-        }
     }
 }

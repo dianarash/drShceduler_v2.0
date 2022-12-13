@@ -9,25 +9,28 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp">
 
 
         <ImageView
             android:id="@+id/imvPhoto"
-            android:layout_width="61dp"
-            android:layout_height="61dp"
+            android:layout_width="126dp"
+            android:layout_height="129dp"
+            android:layout_marginTop="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@drawable/anonymous" />
 
         <TextView
             android:id="@+id/txtvFullName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="TextView"
             android:fontFamily="@font/namu"
+            android:text="TextView"
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -198,7 +201,7 @@
 
                 <TextView
                     android:id="@+id/txtvToS"
-                    android:layout_width="match_parent"
+                    android:layout_width="226dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/namu"
                     android:text="..."
@@ -228,7 +231,7 @@
 
             <TextView
                 android:id="@+id/txtvEmail"
-                android:layout_width="245dp"
+                android:layout_width="225dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/namu"
                 android:text="..."

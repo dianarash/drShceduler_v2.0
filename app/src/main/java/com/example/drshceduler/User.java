@@ -1,5 +1,7 @@
 package com.example.drshceduler;
 
+import android.media.Image;
+
 public class User {
     private String StudentID;
     private String FullName;
@@ -73,5 +75,4 @@ public class User {
     public boolean isThemeDark() {
         return ThemeDark;
     }
-
 }

@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,16 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+
+import static com.example.drshceduler.DataActivity.subjectListFull;
 
 public class SettingsFragment extends Fragment {
     private RadioButton rbtnDark, rbtnLight, rbtnLang1, rbtnLang2;
@@ -84,8 +95,54 @@ public class SettingsFragment extends Fragment {
                         dbUser.child(student.getUserID()).child("Language").setValue("uk");
                         break;
                 }
+                readScheduleData();
             }
         });
 
     }
+
+    private void readScheduleData(){
+        //метод для зчитування розкладу юзера
+
+        subjectListFull = new ArrayList<>();   //масив для зберігання повного розкладу юзера
+        //отримуємо з бази даних вітку Schedule
+        DatabaseReference dbScheduleFull = FirebaseDatabase.getInstance().getReference().child("Schedule");
+        dbScheduleFull.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d("Group:", student.getGroup());
+                //очищаємо масив
+                subjectListFull.clear();
+                if (dataSnapshot.exists()) {
+                    if(student.getLanguage().equals("en")){
+                        for(DataSnapshot ds : dataSnapshot.child(student.getGroup() + "_en").getChildren()) {
+                            Subject subject = ds.getValue(Subject.class);
+                            subjectListFull.add(subject);
+                        }
+                    }
+                    else{
+                        for(DataSnapshot ds : dataSnapshot.child(student.getGroup()).getChildren()) {
+                            Subject subject = ds.getValue(Subject.class);
+                            subjectListFull.add(subject);
+//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Cabinet").setValue(subject.getCabinet());
+//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Day").setValue(subject.getDay());
+//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Link").setValue(subject.getLink());
+//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Subject").setValue(subject.getSubject());
+//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Teacher").setValue(subject.getTeacher());
+//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Time").setValue(subject.getTime());
+//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Type").setValue(subject.getType());
+//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Week").setValue(subject.getWeek());
+                        }
+                    }
+                    Log.d(" -- Create schedule:",  String.valueOf(dataSnapshot.getValue()));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
 }

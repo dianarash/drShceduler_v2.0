@@ -78,14 +78,6 @@ public class DataActivity extends AppCompatActivity {
                         for(DataSnapshot ds : dataSnapshot.child(student.getGroup()).getChildren()) {
                             Subject subject = ds.getValue(Subject.class);
                             subjectListFull.add(subject);
-//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Cabinet").setValue(subject.getCabinet());
-//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Day").setValue(subject.getDay());
-//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Link").setValue(subject.getLink());
-//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Subject").setValue(subject.getSubject());
-//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Teacher").setValue(subject.getTeacher());
-//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Time").setValue(subject.getTime());
-//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Type").setValue(subject.getType());
-//                            dbScheduleFull.child(student.getGroup() + "_en").child(ds.getKey()).child("Week").setValue(subject.getWeek());
                         }
                     }
                     Log.d(" -- Create schedule:",  String.valueOf(dataSnapshot.getValue()));
