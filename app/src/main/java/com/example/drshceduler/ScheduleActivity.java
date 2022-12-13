@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.firebase.database.DatabaseReference;
-
 public class ScheduleActivity extends AppCompatActivity {
     private Button btnAccount, btnSchedule, btnSettings;
     private ScheduleFragment schFr = new ScheduleFragment();
@@ -33,6 +31,9 @@ public class ScheduleActivity extends AppCompatActivity {
         btnSchedule.setEnabled(false);
         txtvTitle.setText(getString(R.string.schedule_title));
     }
+
+    // методи обробки натисканнь кнопок "Schedule", "Account", "Settings"
+    // робимо натиснуту кнопку неактивною, а дві інші активізуємо. Відображаємо відповідний фрагмент
 
     public void onClickSchedule(View view){
         setNewFragment(schFr);
@@ -61,6 +62,7 @@ public class ScheduleActivity extends AppCompatActivity {
     }
 
     private void setNewFragment(Fragment fr) {
+        //метод для відображення нового фрагменту
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.fltForFragment, fr);
         ft.addToBackStack(null);

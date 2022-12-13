@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">РОЗКЛАД v1.0</string>
+    <string name="app_name">РОЗКЛАД v2.0</string>
     <string name="prompt_email">E-Mail</string>
     <string name="prompt_password">Пароль</string>
     <string name="action_sign_in">Логін</string>
@@ -25,5 +25,6 @@
     <string name="theme_light">Світла</string>
     <string name="uk">Українська</string>
     <string name="en">Англійська</string>
+    <string name="calendar_title">Календар</string>
 
 </resources>

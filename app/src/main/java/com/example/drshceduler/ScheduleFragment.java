@@ -48,10 +48,11 @@ public class ScheduleFragment extends Fragment {
         String[] dayName = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 
         btnCalendar = view.findViewById(R.id.btnCalendar);
-        subjectView = (ListView) view.findViewById(R.id.lvwSchedule);
+        subjectView = view.findViewById(R.id.lvwSchedule);
 
+        // будуємо календар для вибору дати
         MaterialDatePicker.Builder calBuilder = MaterialDatePicker.Builder.datePicker();
-        calBuilder.setTitleText("@string/prompt_password");
+        calBuilder.setTitleText(R.string.calendar_title);
         final MaterialDatePicker materialDatePicker = calBuilder.build();
 
         //опрацьовувач події натискання кнопки з датою - виводимо календар
@@ -120,22 +121,20 @@ public class ScheduleFragment extends Fragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            // Get the data item for this position
+            // метод для отримання власного View для адаптера
             Subject subject = getItem(position);
-            // Check if an existing view is being reused, otherwise inflate the view
             if (convertView == null) {
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_of_subjects, parent, false);
             }
-            // Lookup view for data population
-            TextView txtvSubName = (TextView) convertView.findViewById(R.id.txtvSubSubject);
-            TextView txtvSubTeacher = (TextView) convertView.findViewById(R.id.txtvSubTeacher);
-            TextView txtvSubTime = (TextView) convertView.findViewById(R.id.txtvTime);
-            TextView txtvSubType = (TextView) convertView.findViewById(R.id.txtvSubType);
-            TextView txtvSubCabinet = (TextView) convertView.findViewById(R.id.txtvSubCabinet);
-            TextView txtvSubLink = (TextView) convertView.findViewById(R.id.txtvSubLink);
-            TextView txtvSubNumber = (TextView) convertView.findViewById(R.id.txtvSubNumber);
 
-            // Populate the data into the template view using the data object
+            TextView txtvSubName = convertView.findViewById(R.id.txtvSubSubject);
+            TextView txtvSubTeacher = convertView.findViewById(R.id.txtvSubTeacher);
+            TextView txtvSubTime = convertView.findViewById(R.id.txtvTime);
+            TextView txtvSubType = convertView.findViewById(R.id.txtvSubType);
+            TextView txtvSubCabinet = convertView.findViewById(R.id.txtvSubCabinet);
+            TextView txtvSubLink = convertView.findViewById(R.id.txtvSubLink);
+            TextView txtvSubNumber = convertView.findViewById(R.id.txtvSubNumber);
+
             txtvSubName.setText(subject.getSubject());
             txtvSubTeacher.setText(subject.getTeacher());
             txtvSubTime.setText(subject.getTime());
@@ -151,21 +150,10 @@ public class ScheduleFragment extends Fragment {
                     Log.d("===== Selected Link:", String.valueOf(txtvSubLink.getText()));
                     Uri uri = Uri.parse(String.valueOf(txtvSubLink.getText()));
                     startActivity(new Intent(Intent.ACTION_VIEW, uri));
-//                    URL myURL = null;
-//                    try {
-//                        myURL = new URL(String.valueOf(txtvSubLink.getText()));
-//                        URLConnection myURLConnection = myURL.openConnection();
-//                        myURLConnection.connect();
-//                    } catch (MalformedURLException e) {
-//                        e.printStackTrace();
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
                 }
 
             });
 
-            // Return the completed view to render on screen
             return convertView;
         }
     }

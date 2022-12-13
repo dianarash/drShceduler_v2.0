@@ -31,7 +31,7 @@ public class DataActivity extends AppCompatActivity {
 
         ImageView logo = findViewById(R.id.imvLogo);
         int nightModeFlags =  getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
-
+        // в залежності від теми виводимо відповідний логотип
         switch (nightModeFlags) {
             case Configuration.UI_MODE_NIGHT_YES:
                 logo.setImageResource(R.drawable.logo_white);
@@ -44,7 +44,7 @@ public class DataActivity extends AppCompatActivity {
             case Configuration.UI_MODE_NIGHT_UNDEFINED:
                 break;
         }
-
+        // запускаємо метод зчитування розкладу даного користувача
         readScheduleData();
     }
 
@@ -56,7 +56,7 @@ public class DataActivity extends AppCompatActivity {
     }
 
     private void readScheduleData(){
-        //метод для зчитування розкладу юзера
+        //метод для зчитування розкладу користувача
 
         subjectListFull = new ArrayList<>();   //масив для зберігання повного розкладу юзера
         //отримуємо з бази даних вітку Schedule

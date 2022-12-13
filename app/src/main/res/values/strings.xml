@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SCHEDULER v1.0</string>
+    <string name="app_name">SCHEDULER v2.0</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">LogIn</string>
@@ -24,6 +24,7 @@
     <string name="theme_light">Light</string>
     <string name="uk">Ukrainian</string>
     <string name="en">English</string>
+    <string name="calendar_title">Calendar</string>
 
     <!-- Preference Titles -->
     <string name="messages_header" translatable="false">Messages</string>
