@@ -21,6 +21,7 @@
             android:background="@drawable/et_style"
             android:fontFamily="@font/namu"
             android:text="Mon 01.01.2023"
+            android:textAllCaps="false"
             android:textStyle="bold" />
 
         <ListView

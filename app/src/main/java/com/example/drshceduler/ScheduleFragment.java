@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
 
 
 import static com.example.drshceduler.DataActivity.subjectListFull;
@@ -31,7 +32,7 @@ import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClic
 public class ScheduleFragment extends Fragment {
     private Button btnCalendar;
     private Calendar c = Calendar.getInstance();
-    private String selectedDay, selectedDate;
+    private String selectedDay, selectedDate, nameOfDay;
     private ArrayList<Subject> onDaySchedule = new ArrayList<>();
     private ListView subjectView;
 
@@ -46,6 +47,7 @@ public class ScheduleFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         //Масив для формування назв днів
         String[] dayName = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        String[] dayName_uk = {"Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"};
 
         btnCalendar = view.findViewById(R.id.btnCalendar);
         subjectView = view.findViewById(R.id.lvwSchedule);
@@ -70,17 +72,30 @@ public class ScheduleFragment extends Fragment {
                 Log.d("Create schedule:", String.valueOf(selection));
                 c.setTimeInMillis((Long) selection);
                 selectedDay = dayName[c.get(Calendar.DAY_OF_WEEK) - 1];
+                if(Locale.getDefault().getLanguage().equals("uk")){
+                    nameOfDay = dayName_uk[c.get(Calendar.DAY_OF_WEEK) - 1];
+                }
+                else{
+                    nameOfDay = selectedDay;
+                }
                 selectedDate = String.format("%s.%s.%s", c.get(Calendar.DAY_OF_MONTH), c.get(Calendar.MONTH) + 1, c.get(Calendar.YEAR));
-                btnCalendar.setText(String.format("%s %s", selectedDay, selectedDate));
+                btnCalendar.setText(String.format("%s %s", nameOfDay, selectedDate));
                 formDaySchedule();
             }
         });
 
         //визначаємо день поточної дати та поточну дату
         selectedDay = dayName[c.get(Calendar.DAY_OF_WEEK) - 1];
+
+        if(Locale.getDefault().getLanguage().equals("uk")){
+            nameOfDay = dayName_uk[c.get(Calendar.DAY_OF_WEEK) - 1];
+        }
+        else{
+            nameOfDay = selectedDay;
+        }
         selectedDate = String.format("%s.%s.%s", c.get(Calendar.DAY_OF_MONTH), c.get(Calendar.MONTH) + 1, c.get(Calendar.YEAR));
 
-        btnCalendar.setText(String.format("%s %s", selectedDay, selectedDate));
+        btnCalendar.setText(String.format("%s %s", nameOfDay, selectedDate));
 
         formDaySchedule();
     }

@@ -45,7 +45,7 @@ public class AccountFragment extends Fragment {
         txtvFullName = view.findViewById(R.id.txtvFullName);
         txtvStudentID = view.findViewById(R.id.txtvStudentID);
         txtvFaculty = view.findViewById(R.id.txtvFaculty);
-        txtvSpeciality = view.findViewById(R.id.txtvSpeciality);
+        txtvSpeciality = view.findViewById(R.id.txtvSpecialty);
         txtvGroup = view.findViewById(R.id.txtvGroup);
         txtvTerm = view.findViewById(R.id.txtvTerm);
         txtvFoS = view.findViewById(R.id.txtvFoS);
@@ -54,7 +54,7 @@ public class AccountFragment extends Fragment {
         imPhoto = view.findViewById(R.id.imvPhoto);
 
         txtvFullName.setText(student.getFullName());
-        txtvStudentID.setText(student.getStudentID());
+        txtvStudentID.setText(student.getStudentId());
         txtvFaculty.setText(student.getFaculty());
         txtvSpeciality.setText(student.getSpecialty());
         txtvGroup.setText(student.getGroup());

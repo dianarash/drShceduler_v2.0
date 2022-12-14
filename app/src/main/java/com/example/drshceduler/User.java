@@ -1,9 +1,7 @@
 package com.example.drshceduler;
 
-import android.media.Image;
-
 public class User {
-    private String StudentID;
+    private String StudentId;
     private String FullName;
     private String Faculty;
     private String Specialty;
@@ -36,8 +34,8 @@ public class User {
         return FullName;
     }
 
-    public String getStudentID() {
-        return StudentID;
+    public String getStudentId() {
+        return StudentId;
     }
 
     public String getFaculty() {

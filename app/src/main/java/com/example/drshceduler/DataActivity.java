@@ -64,8 +64,7 @@ public class DataActivity extends AppCompatActivity {
         dbScheduleFull.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d("Group:", student.getGroup());
-                //очищаємо масив
+                //очищаємо масив загального розкладу
                 subjectListFull.clear();
                 if (dataSnapshot.exists()) {
                     if(student.getLanguage().equals("en")){

@@ -6,20 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".ScheduleActivity">
 
+
     <TextView
         android:id="@+id/txtvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/namu"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/schedule_title" />
-
 
     <View
         android:id="@+id/divider"
@@ -37,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
+        android:gravity="center_horizontal|left"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,37 +45,52 @@
 
         <Button
             android:id="@+id/bntAccount"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:fontFamily="@font/namu"
-            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="2dp"
             android:layout_weight="1"
+            android:fontFamily="@font/namu"
             android:onClick="onClickAccount"
-            android:text="@string/btn_account" />
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/btn_account"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnSchedule"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:fontFamily="@font/namu"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:layout_weight="1"
             android:enabled="true"
+            android:fontFamily="@font/namu"
             android:onClick="onClickSchedule"
-            android:text="@string/btn_schedule" />
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/btn_schedule"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnSettings"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:fontFamily="@font/namu"
-            android:layout_marginRight="5dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="1"
+            android:fontFamily="@font/namu"
             android:onClick="onClickSettings"
-            android:text="@string/btn_settings" />
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/btn_settings"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <FrameLayout

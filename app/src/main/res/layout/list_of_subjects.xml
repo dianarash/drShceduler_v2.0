@@ -71,7 +71,7 @@
 
                 <TextView
                     android:id="@+id/txtvSubSubject"
-                    android:layout_width="wrap_content"
+                    android:layout_width="292dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/namu"
@@ -80,20 +80,12 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/namu"
-                    android:text="   " />
-
-                <TextView
                     android:id="@+id/txtvSubType"
-                    android:layout_width="70dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:fontFamily="@font/namu"
-                    android:gravity="center_horizontal"
+                    android:gravity="right"
                     android:text="(Practice)" />
 
             </LinearLayout>
@@ -129,7 +121,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/namu"
-                android:text="https://us04web.zoom.us/j/76889583600?pwd=wSaRgNkS957mGAVmkx84p3QJAbPL26.1" />
+                android:text="https://us04web.zoom.us/j/76889583600?pwd=wSaRgNkS957mGAVmkx84p3QJAbPL26.1"
+                android:textColor="#0973C8" />
         </LinearLayout>
     </LinearLayout>
 

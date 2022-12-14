@@ -5,12 +5,14 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".SettingsFragment">
 
     <TextView
         android:id="@+id/txtvThemeColTit"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/namu"
         android:text="@string/tit_theme_color"
         android:textSize="20sp"
@@ -30,16 +32,16 @@
             android:id="@+id/rbtnDark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/namu"
             android:checked="false"
+            android:fontFamily="@font/namu"
             android:text="@string/theme_dark" />
 
         <RadioButton
             android:id="@+id/rbtnLight"
             android:layout_width="match_parent"
-            android:fontFamily="@font/namu"
             android:layout_height="wrap_content"
             android:checked="false"
+            android:fontFamily="@font/namu"
             android:text="@string/theme_light" />
     </RadioGroup>
 
@@ -68,16 +70,16 @@
             android:id="@+id/rbtnLang1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/namu"
             android:checked="false"
+            android:fontFamily="@font/namu"
             android:text="@string/uk" />
 
         <RadioButton
             android:id="@+id/rbtnLang2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/namu"
             android:checked="false"
+            android:fontFamily="@font/namu"
             android:text="@string/en" />
     </RadioGroup>
 

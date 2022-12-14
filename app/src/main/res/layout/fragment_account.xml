@@ -18,7 +18,7 @@
             android:id="@+id/imvPhoto"
             android:layout_width="126dp"
             android:layout_height="129dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -31,212 +31,263 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/namu"
             android:text="TextView"
-            android:textSize="28sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imvPhoto" />
 
-        <TableLayout
-            android:id="@+id/tbltMain"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/lltStudentID"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="25dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtvFullName">
 
-            <TableRow
+            <TextView
+                android:id="@+id/txtvStIDtit"
+                android:layout_width="145dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/namu"
+                android:text="@string/tit_studentid"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtvStudentID"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/namu"
+                android:text="..."
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtvStIDtit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/namu"
-                    android:text="@string/tit_studentid"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/lltFaculty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltStudentID">
 
-                <TextView
-                    android:id="@+id/txtvStudentID"
-                    android:layout_width="238dp"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/namu"
-                    android:text="..."
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic" />
-            </TableRow>
+            <TextView
+                android:id="@+id/txtvFacultyTit"
+                android:layout_width="145dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/namu"
+                android:text="@string/tit_faculty"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-            <TableRow
+            <TextView
+                android:id="@+id/txtvFaculty"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/namu"
+                android:text="..."
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtvFacultyTit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/namu"
-                    android:text="@string/tit_faculty"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/lltSpecialty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltFaculty">
 
-                <TextView
-                    android:id="@+id/txtvFaculty"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/namu"
-                    android:text="..."
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic" />
-            </TableRow>
+            <TextView
+                android:id="@+id/txtvSpecTit"
+                android:layout_width="145dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/namu"
+                android:text="@string/tit_specialty"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-            <TableRow
+            <TextView
+                android:id="@+id/txtvSpecialty"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/namu"
+                android:text="..."
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtvSpecTit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/namu"
-                    android:text="@string/tit_specialty"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/lltGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltSpecialty">
 
-                <TextView
-                    android:id="@+id/txtvSpeciality"
-                    android:layout_width="201dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/namu"
-                    android:text="..."
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic" />
-            </TableRow>
+            <TextView
+                android:id="@+id/txtvGroupTit"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/namu"
+                android:text="@string/tit_group"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-            <TableRow
+            <TextView
+                android:id="@+id/txtvGroup"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/namu"
+                android:text="..."
+                android:textSize="16sp"
+                android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/txtvGroupTit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/namu"
-                    android:text="@string/tit_group"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtvGroup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/namu"
-                    android:text="..."
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic" />
-            </TableRow>
+        <LinearLayout
+            android:id="@+id/lltTerm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltGroup">
 
-            <TableRow
+            <TextView
+                android:id="@+id/txtvTermTit"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/namu"
+                android:text="@string/tit_term"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtvTerm"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/namu"
+                android:text="..."
+                android:textSize="16sp"
+                android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/txtvTermTit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/namu"
-                    android:text="@string/tit_term"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtvTerm"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/namu"
-                    android:text="..."
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic" />
-            </TableRow>
+        <LinearLayout
+            android:id="@+id/lltFoS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltTerm">
 
-            <TableRow
+            <TextView
+                android:id="@+id/txtvFoStit"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/namu"
+                android:text="@string/tit_form_of_study"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtvFoS"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/namu"
+                android:text="..."
+                android:textSize="16sp"
+                android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/txtvFoStit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/namu"
-                    android:text="@string/tit_form_of_study"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtvFoS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/namu"
-                    android:text="..."
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic" />
-            </TableRow>
+        <LinearLayout
+            android:id="@+id/lltToS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltFoS">
 
-            <TableRow
+            <TextView
+                android:id="@+id/txtvToStit"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/namu"
+                android:text="@string/tit_term_of_study"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtvToS"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/namu"
+                android:text="..."
+                android:textSize="16sp"
+                android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/txtvToStit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/namu"
-                    android:text="@string/tit_term_of_study"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txtvToS"
-                    android:layout_width="226dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/namu"
-                    android:text="..."
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic" />
-            </TableRow>
-
-        </TableLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/lltEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tbltMain">
+            app:layout_constraintTop_toBottomOf="@+id/lltToS">
 
             <TextView
                 android:id="@+id/txtvEmailTit"
-                android:layout_width="184dp"
+                android:layout_width="143dp"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
                 android:fontFamily="@font/namu"
                 android:text="@string/tit_email"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtvEmail"
-                android:layout_width="225dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/namu"
                 android:text="..."
-                android:textSize="20sp"
-                android:textStyle="bold|italic" />
+                android:textSize="16sp"
+                android:textStyle="italic" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
