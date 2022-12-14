@@ -3,7 +3,6 @@
     <style name="Theme.DrScheduler" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/dark_orange</item>
-        <item name="colorPrimaryDark">@color/dark_orange</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/dark_bg</item>
         <item name="android:textColor">@color/dark_text</item>

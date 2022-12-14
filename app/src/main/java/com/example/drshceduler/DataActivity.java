@@ -57,7 +57,6 @@ public class DataActivity extends AppCompatActivity {
 
     private void readScheduleData(){
         //метод для зчитування розкладу користувача
-
         subjectListFull = new ArrayList<>();   //масив для зберігання повного розкладу юзера
         //отримуємо з бази даних вітку Schedule
         DatabaseReference dbScheduleFull = FirebaseDatabase.getInstance().getReference().child("Schedule");
